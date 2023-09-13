@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SUMMARYREPORTS</title>
+</head>
+<body>
+<h1>SUMMARYREPORTS</h1>
+{ % for request_name,request_data in data in data.items()% }
+<h2>requestdata.reportName</h2>
+<p>failed:{{request_data.failed}}</p>
+<p>broken:{{request_data.broken}}</p>
+<p>skipped:{{request_data.skipped}}</p>
+<p>start:{{request_data.start}}</p>
+<p>stop:{{request_data.stop}}</p>
+<p>duration:{{request_data.duration}}</p>
+<p>minDuration:{{request_data.minDuration}}</p>
+<p>maxDuration:{{request_data.maxDuration}}</p>
+<p>sumDuration:{{request_data.sumDuration</p>
+{%endfor%}
+
+
+
+</body>
+</html>
