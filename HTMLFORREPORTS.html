@@ -1,66 +1,21 @@
-{
-    "HTTP Request-1": {
-        "transaction": "HTTP Request-1",
-        "sampleCount": 4000,
-        "errorCount": 0,
-        "errorPct": 0.0,
-        "meanResTime": 57.63849999999992,
-        "medianResTime": 37.0,
-        "minResTime": 26.0,
-        "maxResTime": 921.0,
-        "pct1ResTime": 108.0,
-        "pct2ResTime": 143.94999999999982,
-        "pct3ResTime": 274.97999999999956,
-        "throughput": 512.7547750288425,
-        "receivedKBytesPerSec": 2383.5736203691836,
-        "sentKBytesPerSec": 0.0
-    },
-    "Total": {
-        "transaction": "Total",
-        "sampleCount": 12000,
-        "errorCount": 0,
-        "errorPct": 0.0,
-        "meanResTime": 45.96199999999999,
-        "medianResTime": 36.0,
-        "minResTime": 3.0,
-        "maxResTime": 967.0,
-        "pct1ResTime": 96.0,
-        "pct2ResTime": 133.0,
-        "pct3ResTime": 253.98999999999978,
-        "throughput": 1529.4417537598777,
-        "receivedKBytesPerSec": 5395.961616588071,
-        "sentKBytesPerSec": 0.0
-    },
-    "HTTP Request-0": {
-        "transaction": "HTTP Request-0",
-        "sampleCount": 4000,
-        "errorCount": 0,
-        "errorPct": 0.0,
-        "meanResTime": 11.255249999999975,
-        "medianResTime": 7.0,
-        "minResTime": 3.0,
-        "maxResTime": 328.0,
-        "pct1ResTime": 17.0,
-        "pct2ResTime": 30.0,
-        "pct3ResTime": 97.96999999999935,
-        "throughput": 513.0178273695011,
-        "receivedKBytesPerSec": 330.139747258561,
-        "sentKBytesPerSec": 0.0
-    },
-    "HTTP Request": {
-        "transaction": "HTTP Request",
-        "sampleCount": 4000,
-        "errorCount": 0,
-        "errorPct": 0.0,
-        "meanResTime": 68.99225000000017,
-        "medianResTime": 45.0,
-        "minResTime": 31.0,
-        "maxResTime": 967.0,
-        "pct1ResTime": 125.0,
-        "pct2ResTime": 176.0,
-        "pct3ResTime": 310.96999999999935,
-        "throughput": 509.81391791995924,
-        "receivedKBytesPerSec": 2697.9808082940353,
-        "sentKBytesPerSec": 0.0
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistis Report</title>
+</head>
+<body>
+<h1>Statistics Report</h1>
+{ % for request_name,request_data in data in data.items()% }
+<h2> {{request_data.transaction}} </h2>
+<p> The sample count is:{{request_data.sampleCount}}</p>
+<p>Error Count:{{request_data.meanResTime</p>
+<p>Mean Response Time:{{request_data.meanResTime}}</p>
+<p>Median Response Time:{{request_data.medianResTime</p>
+<p>Minimum Response Time:{{ request_data.minResTime</p>
+<p>Maximum ResponseTime:{{request_data.maxResTime}}</p>
+<p>Throughput{{request_data.throughput}}</p>
+{%endfor%}
+
+</body>
+</html>
