@@ -167,6 +167,6 @@ li {{
         with open(html_file_path, 'w') as html_file:
             html_file.write(html_output)
 
-        print(f"HTML report generated: {html_file_path}")#print
+        print(f"HTML report generated: {html_file_path}")#p
     except json.JSONDecodeError:
         print(f"Error decoding JSON in {json_file_path}")
